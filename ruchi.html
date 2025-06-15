@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KarMishra RuchiSeva | Traditional Odia Catering Services</title>
+    <meta name="description" content="Authentic Odia catering services for weddings, thread ceremonies, birthdays and corporate events across Odisha. Taste the legacy of Madan Mohan Kar and Sarojini Mishra.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&family=Baloo+Bhai+2:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
+    <style>
+        .hindi-font {
+            font-family: 'Tiro Devanagari Hindi', serif;
+        }
+        .odia-font {
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1596450514735-111a2fe02935?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .traditional-pattern {
+            background-image: url('https://www.transparenttextures.com/patterns/rice-paper-3.png');
+        }
+        .menu-item:hover .menu-overlay {
+            opacity: 1;
+        }
+        .testimonial-card {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .language-selector:hover .language-dropdown {
+            display: block;
+        }
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+        .rotate--45 {
+            transform: rotate(-45deg);
+        }
+    </style>
+</head>
+<body class="bg-amber-50 font-['Poppins'] traditional-pattern">
+    <!-- Language Selector -->
+    <div class="fixed right-4 top-4 z-50">
+        <div class="language-selector relative inline-block">
+            <button id="languageButton" class="bg-amber-700 text-white px-4 py-2 rounded-full shadow-lg flex items-center space-x-2 z-10">
+                <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5">
+                <span>EN</span>
+                <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="language-dropdown hidden absolute right-0 mt-2 w-40 bg-white rounded-md shadow-lg z-50">
+                <a href="#" data-lang="en" class="block px-4 py-2 text-gray-800 hover:bg-amber-100 flex items-center space-x-2">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" class="w-5 h-5">
+                    <span>English</span>
+                </a>
+                <a href="#" data-lang="hi" class="block px-4 py-2 text-gray-800 hover:bg-amber-100 flex items-center space-x-2">
+                    <img src="https://flagcdn.com/w20/in.png" alt="Hindi" class="w-5 h-5">
+                    <span class="hindi-font">हिन्दी</span>
+                </a>
+                <a href="#" data-lang="or" class="block px-4 py-2 text-gray-800 hover:bg-amber-100 flex items-center space-x-2">
+                    <img src="https://flagcdn.com/w20/in.png" alt="Odia" class="w-5 h-5">
+                    <span class="odia-font">ଓଡ଼ିଆ</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-amber-900 text-white shadow-lg sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="karmishra.png" alt="KarMishra RuchiSeva Logo" class="w-12 h-12 rounded-full">
+                    <span class="text-xl font-bold">KarMishra RuchiSeva</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-amber-300 transition">Home</a>
+                    <a href="#about" class="hover:text-amber-300 transition">About Us</a>
+                    <a href="#services" class="hover:text-amber-300 transition">Services</a>
+                    <a href="#menu" class="hover:text-amber-300 transition">Menu</a>
+                    <a href="#gallery" class="hover:text-amber-300 transition">Gallery</a>
+                    <a href="#contact" class="bg-amber-700 hover:bg-amber-600 px-4 py-2 rounded-lg transition">Contact</a>
+                </div>
+                
+                <button id="mobileMenuButton" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+                <a href="#home" class="block py-2 hover:text-amber-300">Home</a>
+                <a href="#about" class="block py-2 hover:text-amber-300">About Us</a>
+                <a href="#services" class="block py-2 hover:text-amber-300">Services</a>
+                <a href="#menu" class="block py-2 hover:text-amber-300">Menu</a>
+                <a href="#gallery" class="block py-2 hover:text-amber-300">Gallery</a>
+                <a href="#contact" class="block py-2 hover:text-amber-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white h-screen flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4" data-i18n="hero.title">Savor Tradition. Celebrate Moments.</h1>
+                <p class="text-xl mb-8" data-i18n="hero.subtitle">Authentic Odia cuisine served with love and tradition since 1985</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#booking" class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-medium transition" data-i18n="hero.button1">Book Now</a>
+                    <a href="#menu" class="border border-white hover:bg-white hover:text-amber-900 text-white px-8 py-3 rounded-lg font-medium transition" data-i18n="hero.button2">View Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="about.title">Our Legacy</h2>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2 relative">
+                    <div class="rounded-xl overflow-hidden shadow-lg">
+                        <img src="karmishra.png" alt="KarMishra RuchiSeva Logo" class="w-full h-auto">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-amber-700 p-4 rounded-lg shadow-lg hidden md:block">
+                        <p class="text-white text-center font-semibold">Since <span class="text-3xl">1985</span></p>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-4" data-i18n="about.subtitle">The Story of Madan Mohan Kar & Sarojini Mishra</h3>
+                    <p class="text-gray-700 mb-4" data-i18n="about.p1">Founded by the culinary genius of Madan Mohan Kar and the hospitality wisdom of Sarojini Mishra, KarMishra RuchiSeva began as a small kitchen serving authentic Odia meals to neighbors and community events.</p>
+                    <p class="text-gray-700 mb-4" data-i18n="about.p2">What started as a passion for preserving traditional Odia flavors has grown into one of the most trusted catering services in the state, while maintaining the same homemade taste and attention to detail.</p>
+                    <p class="text-gray-700 mb-6" data-i18n="about.p3">Today, we continue their legacy by bringing generations together through food that tells stories of our land, culture, and family values.</p>
+                    <a href="#contact" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-2 rounded-lg transition" data-i18n="about.button">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="services.title">Our Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="services.subtitle">Comprehensive catering solutions for all your special occasions</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Wedding -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Wedding Catering" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2" data-i18n="services.wedding.title">Wedding Catering</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="services.wedding.desc">Complete wedding catering packages including traditional Odia thali, buffet setups, and specialized menus.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="services.wedding.link">View Sample Menu →</a>
+                    </div>
+                </div>
+                
+                <!-- Thread Ceremony -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Thread Ceremony" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2" data-i18n="services.thread.title">Thread Ceremonies</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="services.thread.desc">Traditional ceremonial meals prepared according to customs with strictly vegetarian options.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="services.thread.link">Learn More →</a>
+                    </div>
+                </div>
+                
+                <!-- Birthdays -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Birthday Catering" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2" data-i18n="services.birthday.title">Birthday Parties</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="services.birthday.desc">Themed birthday catering with customized cakes and a mix of traditional and contemporary dishes.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="services.birthday.link">See Options →</a>
+                    </div>
+                </div>
+                
+                <!-- Corporate -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Corporate Events" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2" data-i18n="services.corporate.title">Corporate Events</h3>
+                        <p class="text-gray-600 mb-4" data-i18n="services.corporate.desc">Professional catering for meetings, conferences, and corporate gatherings with customizable menus.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="services.corporate.link">Get Quote →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="menu.title">Our Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="menu.subtitle">A culinary journey through authentic Odia flavors</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <!-- Menu Categories -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+                <button class="menu-category py-2 px-4 rounded-full bg-amber-600 text-white" data-category="vegetarian" data-i18n="menu.categories.vegetarian">Vegetarian</button>
+                <button class="menu-category py-2 px-4 rounded-full bg-amber-100 text-amber-800" data-category="nonveg" data-i18n="menu.categories.nonveg">Non-Veg</button>
+                <button class="menu-category py-2 px-4 rounded-full bg-amber-100 text-amber-800" data-category="snacks" data-i18n="menu.categories.snacks">Snacks</button>
+                <button class="menu-category py-2 px-4 rounded-full bg-amber-100 text-amber-800" data-category="sweets" data-i18n="menu.categories.sweets">Sweets</button>
+                <button class="menu-category py-2 px-4 rounded-full bg-amber-100 text-amber-800" data-category="beverages" data-i18n="menu.categories.beverages">Beverages</button>
+                <button class="menu-category py-2 px-4 rounded-full bg-amber-100 text-amber-800" data-category="live" data-i18n="menu.categories.live">Live Counters</button>
+            </div>
+            
+            <!-- Vegetarian Menu (default shown) -->
+            <div id="vegetarian-menu" class="menu-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Menu Item 1 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md relative h-64">
+                    <img src="dalma.jpg" alt="Dalma" class="w-full h-full object-cover">
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1 hindi-font" data-i18n="menu.items.dalma.name">Dalma (ଡାଲମା)</h3>
+                        <p class="text-amber-200 mb-2" data-i18n="menu.items.dalma.desc">Lentil curry with mixed vegetables, Odisha's signature dish</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-300 font-medium" data-i18n="menu.price">₹180</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1 rounded text-sm">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md relative h-64">
+                    <img src="saga bhaja.jpg" alt="Saag" class="w-full h-full object-cover">
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1" data-i18n="menu.items.saag.name">Saaga Bhaja (ସାଗ ଭାଜା)</h3>
+                        <p class="text-amber-200 mb-2" data-i18n="menu.items.saag.desc">Fresh leafy greens stir-fried with garlic and spices</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-300 font-medium">₹120</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1 rounded text-sm">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 3 -->
+                <div class="menu-item bg-white rounded-lg overflow-hidden shadow-md relative h-64">
+                    <img src="badichura.jpg" alt="Badi Chura" class="w-full h-full object-cover">
+                    <div class="menu-overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white mb-1" data-i18n="menu.items.badi.name">Badi Chura (ବଡି ଚୁରା)</h3>
+                        <p class="text-amber-200 mb-2" data-i18n="menu.items.badi.desc">Crumbled sun-dried lentil dumplings with onion and chili</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-amber-300 font-medium">₹150</span>
+                            <button class="bg-amber-600 hover:bg-amber-700 text-white px-3 py-1 rounded text-sm">+ Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Non-Veg Menu (hidden by default) -->
+            <div id="nonveg-menu" class="menu-content hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Non-veg items would go here -->
+            </div>
+            
+            <!-- Other menu sections would follow the same pattern -->
+            
+            <div class="text-center mt-12">
+                <button class="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-lg font-medium inline-flex items-center" data-i18n="menu.button">
+                    <span>Download Full Menu</span>
+                    <i class="fas fa-download ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="gallery.title">Our Gallery</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="gallery.subtitle">Capturing memories through food and celebrations</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="buffet system.jpg" alt="Buffet Setup" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=776&q=80" alt="Wedding Food" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Preparing Food" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Fresh Ingredients" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Chefs Cooking" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Dinner Table" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Desserts" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Live Counter" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <!-- New images added below -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Traditional Odia Thali" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="wedding ceremony.jpg" alt="Wedding Ceremony" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1600335895229-6e75511892c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Traditional Sweets" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1606755456206-b25206cde27e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Catering Setup" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="buffet system.jpg" alt="Buffet Setup" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-lg font-medium transition" data-i18n="gallery.button">
+                    View More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="testimonials.title">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="testimonials.subtitle">Hear from families who've celebrated with our catering</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-xl font-bold mr-4">JD</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Jitendra Das</h4>
+                            <p class="text-gray-500 text-sm" data-i18n="testimonials.1.event">Wedding Catering</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3 text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic" data-i18n="testimonials.1.text">"KarMishra RuchiSeva made our daughter's wedding unforgettable. The food was delicious, the service impeccable. Our guests still talk about the authentic Odia thali!"</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-xl font-bold mr-4">PM</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Priyanka Mohanty</h4>
+                            <p class="text-gray-500 text-sm" data-i18n="testimonials.2.event">Thread Ceremony</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3 text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-700 italic" data-i18n="testimonials.2.text">"For our sacred thread ceremony, we needed caterers who understood the rituals and dietary restrictions. KarMishra exceeded all expectations while maintaining authentic flavors."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white p-8 rounded-xl">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-xl font-bold mr-4">RS</div>
+                        <div>
+                            <h4 class="font-bold text-lg">Rajesh Sahoo</h4>
+                            <p class="text-gray-500 text-sm" data-i18n="testimonials.3.event">Corporate Event</p>
+                        </div>
+                    </div>
+                    <div class="flex mb-3 text-amber-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-700 italic" data-i18n="testimonials.3.text">"Our annual company dinner was a huge success thanks to KarMishra's professional team. They accommodated all dietary preferences and delivered outstanding Odia cuisine with modern presentation."</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-lg font-medium transition" data-i18n="testimonials.button">
+                    Read More Reviews
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="packages.title">Packages & Pricing</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="packages.subtitle">Customized solutions for every occasion and budget</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Silver Package -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="bg-amber-200 text-amber-900 py-4 px-6 text-center">
+                        <h3 class="text-2xl font-bold" data-i18n="packages.silver.name">Silver Package</h3>
+                        <p class="text-sm" data-i18n="packages.silver.desc">Perfect for small gatherings</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-amber-800">₹250</span>
+                            <span class="text-gray-600" data-i18n="packages.per">/person</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center" data-i18n="packages.silver.1">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                5 Main Course Dishes
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.silver.2">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                2 Types of Rice
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.silver.3">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                2 Desserts
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.silver.4">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                2 Starters
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.silver.5">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                Basic Beverages
+                            </li>
+                            <li class="flex items-center text-gray-400" data-i18n="packages.silver.6">
+                                <i class="fas fa-times-circle mr-2"></i>
+                                No Live Counter
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg transition" data-i18n="packages.button">
+                            Select Package
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Gold Package (Featured) -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg transform md:-translate-y-4 border-2 border-amber-400">
+                    <div class="bg-amber-400 text-amber-900 py-4 px-6 text-center">
+                        <div class="flex justify-center items-center mb-1">
+                            <span class="bg-amber-700 text-white text-xs px-2 py-1 rounded-full mr-2" data-i18n="packages.popular">POPULAR</span>
+                            <h3 class="text-2xl font-bold" data-i18n="packages.gold.name">Gold Package</h3>
+                        </div>
+                        <p class="text-sm" data-i18n="packages.gold.desc">Best for weddings & big events</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-amber-800">₹400</span>
+                            <span class="text-gray-600">/person</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center" data-i18n="packages.gold.1">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                8 Main Course Dishes
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.gold.2">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                3 Types of Rice
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.gold.3">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                4 Desserts
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.gold.4">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                4 Starters
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.gold.5">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                Premium Beverages
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.gold.6">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                1 Live Counter
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-700 hover:bg-amber-800 text-white py-2 rounded-lg transition font-bold" data-i18n="packages.button">
+                            Select Package
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Platinum Package -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="bg-amber-800 text-white py-4 px-6 text-center">
+                        <h3 class="text-2xl font-bold" data-i18n="packages.platinum.name">Platinum Package</h3>
+                        <p class="text-sm" data-i18n="packages.platinum.desc">Luxury experience for special occasions</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-amber-800">₹650</span>
+                            <span class="text-gray-600">/person</span>
+                        </div>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-center" data-i18n="packages.platinum.1">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                12 Main Course Dishes
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.platinum.2">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                4 Types of Rice
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.platinum.3">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                6 Premium Desserts
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.platinum.4">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                6 Gourmet Starters
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.platinum.5">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                Premium Beverage Bar
+                            </li>
+                            <li class="flex items-center" data-i18n="packages.platinum.6">
+                                <i class="fas fa-check-circle text-amber-600 mr-2"></i>
+                                2 Live Counters
+                            </li>
+                        </ul>
+                        <button class="w-full bg-amber-600 hover:bg-amber-700 text-white py-2 rounded-lg transition" data-i18n="packages.button">
+                            Select Package
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-lg font-medium transition" data-i18n="packages.custom">
+                    Request Custom Package
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="booking" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto bg-amber-50 rounded-xl shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-amber-800 text-white p-8 flex flex-col justify-center">
+                        <h2 class="text-3xl font-bold mb-4" data-i18n="booking.title">Plan Your Event</h2>
+                        <p class="mb-6" data-i18n="booking.subtitle">Let us make your special occasion unforgettable with authentic Odia flavors and impeccable service.</p>
+                        <div class="space-y-4">
+                            <div class="flex items-center">
+                                <div class="bg-amber-600 p-2 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" data-i18n="booking.phone">Call Us</h4>
+                                    <p>9265290747 / 9437157559</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-amber-600 p-2 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" data-i18n="booking.email">Email Us</h4>
+                                    <p>karmishra@ruchiseva.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-amber-600 p-2 rounded-full mr-4">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold" data-i18n="booking.whatsapp">WhatsApp</h4>
+                                    <p>9265290747</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="booking.form.name">Your Name</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="booking.form.phone">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="booking.form.event">Event Type</label>
+                                <select class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                                    <option value="" data-i18n="booking.form.select">Select Event</option>
+                                    <option value="wedding" data-i18n="booking.form.wedding">Wedding</option>
+                                    <option value="thread" data-i18n="booking.form.thread">Thread Ceremony</option>
+                                    <option value="birthday" data-i18n="booking.form.birthday">Birthday</option>
+                                    <option value="corporate" data-i18n="booking.form.corporate">Corporate Event</option>
+                                    <option value="other" data-i18n="booking.form.other">Other</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="booking.form.date">Event Date</label>
+                                <input type="date" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="booking.form.guests">Expected Guests</label>
+                                <input type="number" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-medium transition" data-i18n="booking.form.submit">
+                                Submit Booking Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="faq.title">Frequently Asked Questions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="faq.subtitle">Answers to common questions about our catering services</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="mb-4">
+                    <button class="faq-question w-full text-left bg-white p-4 rounded-lg shadow-md hover:bg-amber-100 transition flex justify-between items-center" data-i18n="faq.1.question">
+                        <span>What areas in Odisha do you serve?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-700" data-i18n="faq.1.answer">We provide catering services across all of Odisha including Bhubaneswar, Cuttack, Puri, Rourkela, Sambalpur, Balasore, and all other major cities and towns. For weddings, we've catered events in even remote villages across the state.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="mb-4">
+                    <button class="faq-question w-full text-left bg-white p-4 rounded-lg shadow-md hover:bg-amber-100 transition flex justify-between items-center">
+                        <span data-i18n="faq.2.question">How far in advance should I book your services?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-700" data-i18n="faq.2.answer">For weddings and large events (100+ guests), we recommend booking at least 3-6 months in advance, especially during peak wedding season (November-February). For smaller events, 1-2 months notice is usually sufficient. Last-minute bookings may be accommodated based on availability.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="mb-4">
+                    <button class="faq-question w-full text-left bg-white p-4 rounded-lg shadow-md hover:bg-amber-100 transition flex justify-between items-center">
+                        <span data-i18n="faq.3.question">Can you accommodate special dietary requirements?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-700" data-i18n="faq.3.answer">Absolutely. We routinely accommodate vegetarian, vegan, Jain, gluten-free, and other dietary requirements. For religious ceremonies, we prepare strictly vegetarian food in separate utensils as per tradition. Please inform us of any special needs when booking.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="mb-4">
+                    <button class="faq-question w-full text-left bg-white p-4 rounded-lg shadow-md hover:bg-amber-100 transition flex justify-between items-center">
+                        <span data-i18n="faq.4.question">What's included in your catering packages?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-700" data-i18n="faq.4.answer">All our packages include food preparation, serving staff, basic dinnerware, and buffet setup. Higher packages include live counters, premium dinnerware, and additional staff. We can also arrange for tents, chairs, tables, and decor at additional cost through our trusted partners.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="mb-4">
+                    <button class="faq-question w-full text-left bg-white p-4 rounded-lg shadow-md hover:bg-amber-100 transition flex justify-between items-center">
+                        <span data-i18n="faq.5.question">What hygiene standards do you follow?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden bg-white p-4 rounded-b-lg shadow-md">
+                        <p class="text-gray-700" data-i18n="faq.5.answer">We maintain the highest hygiene standards with FSSAI-certified kitchens, regular health checks for staff, gloves/hairnets during preparation, and temperature-controlled food transportation. Our ingredients are sourced fresh daily from trusted suppliers, with strict quality control at every stage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Safety Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <div class="text-left mb-8 md:mb-0">
+                        <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="safety.title">Our Commitment to Hygiene & Food Safety</h2>
+                        <div class="w-20 h-1 bg-amber-600"></div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-hand-holding-medical text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.1.title">Sanitized Kitchen Facilities</h4>
+                                <p class="text-gray-700" data-i18n="safety.1.desc">Our central kitchen in Bhubaneswar is FSSAI-certified and undergoes deep cleaning daily, with all equipment sterilized after each use.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-user-shield text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.2.title">Trained Hygienic Staff</h4>
+                                <p class="text-gray-700" data-i18n="safety.2.desc">All kitchen and service staff complete rigorous hygiene training and medical check-ups every 6 months. They wear full protective gear while handling food.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-temperature-low text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.3.title">Temperature Control</h4>
+                                <p class="text-gray-700" data-i18n="safety.3.desc">We maintain strict temperature controls during storage and transportation to ensure food safety from kitchen to venue.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-seedling text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.4.title">Fresh Ingredients</h4>
+                                <p class="text-gray-700" data-i18n="safety.4.desc">We source local, seasonal ingredients from trusted suppliers, with thorough quality checks before use in any preparation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-amber-100 rounded-lg p-6 flex flex-col items-center text-center">
+                            <div class="bg-amber-600 text-white p-4 rounded-full mb-4">
+                                <i class="fas fa-award text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.badge1.title">FSSAI Certified</h4>
+                            <p class="text-gray-700 text-sm" data-i18n="safety.badge1.desc">License No: 1234567890123</p>
+                        </div>
+                        <div class="bg-amber-100 rounded-lg p-6 flex flex-col items-center text-center">
+                            <div class="bg-amber-600 text-white p-4 rounded-full mb-4">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.badge2.title">35+ Years Experience</h4>
+                            <p class="text-gray-700 text-sm" data-i18n="safety.badge2.desc">Since 1985</p>
+                        </div>
+                        <div class="bg-amber-100 rounded-lg p-6 flex flex-col items-center text-center">
+                            <div class="bg-amber-600 text-white p-4 rounded-full mb-4">
+                                <i class="fas fa-utensils text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.badge3.title">1500+ Events Catered</h4>
+                            <p class="text-gray-700 text-sm" data-i18n="safety.badge3.desc">All over Odisha</p>
+                        </div>
+                        <div class="bg-amber-100 rounded-lg p-6 flex flex-col items-center text-center">
+                            <div class="bg-amber-600 text-white p-4 rounded-full mb-4">
+                                <i class="fas fa-users text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-amber-800 mb-2" data-i18n="safety.badge4.title">50+ Trained Staff</h4>
+                            <p class="text-gray-700 text-sm" data-i18n="safety.badge4.desc">Professional team</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="blog.title">From Our Kitchen</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="blog.subtitle">Recipes, catering tips, and cultural food traditions</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="odia recipes.jpg" alt="Odia Recipes" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span data-i18n="blog.1.date">April 15, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span data-i18n="blog.category.recipes">Recipes</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-800 mb-3" data-i18n="blog.1.title">5 Essential Odia Dishes Every Home Cook Should Master</h3>
+                        <p class="text-gray-700 mb-4" data-i18n="blog.1.excerpt">Learn to prepare classic Odia comfort foods like Dalma, Santula, and Pakhala that form the heart of our culinary tradition.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="blog.readmore">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="wedding food.jpg" alt="Wedding Food" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span data-i18n="blog.2.date">March 28, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span data-i18n="blog.category.events">Wedding Tips</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-800 mb-3" data-i18n="blog.2.title">Planning Your Odia Wedding Menu: Traditions & Modern Twists</h3>
+                        <p class="text-gray-700 mb-4" data-i18n="blog.2.excerpt">How to balance traditional ritual foods with contemporary preferences for your perfect wedding feast.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="blog.readmore">Read More →</a>
+                    </div>
+                </div>
+                
+                <!-- Blog Post 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+                    <div class="h-48 overflow-hidden">
+                        <img src="pakhala.jpg" alt="Pakhala" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-2">
+                            <span data-i18n="blog.3.date">March 10, 2023</span>
+                            <span class="mx-2">•</span>
+                            <span data-i18n="blog.category.culture">Food Culture</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-amber-800 mb-3" data-i18n="blog.3.title">The Cultural Significance of Pakhala in Odia Households</h3>
+                        <p class="text-gray-700 mb-4" data-i18n="blog.3.excerpt">Discover why this fermented rice dish is much more than just a summer coolant—it's a way of life in Odisha.</p>
+                        <a href="#" class="text-amber-600 hover:text-amber-700 font-medium" data-i18n="blog.readmore">Read More →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white px-8 py-3 rounded-lg font-medium transition" data-i18n="blog.viewall">
+                    View All Blog Posts
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-amber-900 mb-4" data-i18n="contact.title">Get In Touch</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-i18n="contact.subtitle">We'd love to discuss your event and how we can make it special</p>
+                <div class="w-20 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2 bg-amber-50 rounded-xl p-8">
+                    <h3 class="text-2xl font-bold text-amber-800 mb-6" data-i18n="contact.info.title">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-map-marker-alt text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800" data-i18n="contact.info.address">Our Location</h4>
+                                <p class="text-gray-700" data-i18n="contact.info.address.detail">123 Temple Road, Bhubaneswar, Odisha 751002</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-phone-alt text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800" data-i18n="contact.info.phone">Phone Numbers</h4>
+                                <p class="text-gray-700">9265290747</p>
+                                <p class="text-gray-700">9437157559</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-envelope text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800" data-i18n="contact.info.email">Email Address</h4>
+                                <p class="text-gray-700">karmishra@ruchiseva.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                                <i class="fas fa-clock text-amber-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-amber-800" data-i18n="contact.info.hours">Working Hours</h4>
+                                <p class="text-gray-700" data-i18n="contact.info.hours.detail">Monday-Sunday: 9 AM - 9 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-amber-800 mb-4" data-i18n="contact.info.social">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="#" class="bg-amber-600 hover:bg-amber-700 text-white p-3 rounded-full">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-white rounded-xl shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-bold text-amber-800 mb-6" data-i18n="contact.form.title">Send Us a Message</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="contact.form.name">Your Name</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="contact.form.email">Email Address</label>
+                                <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="contact.form.phone">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="contact.form.subject">Subject</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" data-i18n="contact.form.message">Message</label>
+                                <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-500" rows="4"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-lg font-medium transition" data-i18n="contact.form.submit">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.376008155298!2d85.82452831537689!3d20.28473328640456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190a0a15555555%3A0x37d3d0c2d7bdc0c4!2sBhubaneswar%2C%20Odisha!5e0!3m2!1sen!2sin!4v1625759250000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="filter grayscale hover:grayscale-0 transition duration-1000"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-amber-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-amber-700 rounded-full flex items-center justify-center">
+                            <i class="fas fa-utensils text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold">KarMishra RuchiSeva</span>
+                    </div>
+                    <p class="mb-4" data-i18n="footer.about">Preserving Odia culinary traditions since 1985 with authentic flavors and heartfelt service.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="hover:text-amber-300 transition"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4" data-i18n="footer.links.title">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-amber-300 transition" data-i18n="footer.links.home">Home</a></li>
+                        <li><a href="#about" class="hover:text-amber-300 transition" data-i18n="footer.links.about">About Us</a></li>
+                        <li><a href="#services" class="hover:text-amber-300 transition" data-i18n="footer.links.services">Services</a></li>
+                        <li><a href="#menu" class="hover:text-amber-300 transition" data-i18n="footer.links.menu">Menu</a></li>
+                        <li><a href="#gallery" class="hover:text-amber-300 transition" data-i18n="footer.links.gallery">Gallery</a></li>
+                        <li><a href="#contact" class="hover:text-amber-300 transition" data-i18n="footer.links.contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4" data-i18n="footer.services.title">Our Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-amber-300 transition" data-i18n="footer.services.wedding">Wedding Catering</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition" data-i18n="footer.services.thread">Thread Ceremonies</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition" data-i18n="footer.services.birthday">Birthday Parties</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition" data-i18n="footer.services.corporate">Corporate Events</a></li>
+                        <li><a href="#" class="hover:text-amber-300 transition" data-i18n="footer.services.custom">Custom Catering</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4" data-i18n="footer.contact.title">Contact Info</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-amber-300"></i>
+                            <span data-i18n="footer.contact.address">123 Temple Road, Bhubaneswar, Odisha 751002</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-amber-300"></i>
+                            <span>9265290747 / 9437157559</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-amber-300"></i>
+                            <span>karmishra@ruchiseva.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-amber-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="mb-4 md:mb-0" data-i18n="footer.copyright">© 2023 KarMishra RuchiSeva. All Rights Reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-amber-300 transition" data-i18n="footer.policy.privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-amber-300 transition" data-i18n="footer.policy.terms">Terms of Service</a>
+                    <a href="#" class="hover:text-amber-300 transition" data-i18n="footer.policy.refund">Refund Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="fixed bottom-8 right-8 bg-amber-700 hover:bg-amber-800 text-white p-3 rounded-full shadow-lg transition-opacity opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919265290747" class="fixed bottom-8 left-8 bg-green-500 hover:bg-green-600 text-white p-3 rounded-full shadow-lg" target="_blank">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Language Selector
+        const languageButton = document.getElementById('languageButton');
+        const languageDropdown = document.querySelector('.language-dropdown');
+        const languageLinks = document.querySelectorAll('.language-dropdown a');
+        
+        languageButton.addEventListener('click', () => {
+            languageDropdown.classList.toggle('hidden');
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
+                languageDropdown.classList.add('hidden');
+            }
+        });
+        
+        // Handle language change
+        languageLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = link.getAttribute('data-lang');
+                changeLanguage(lang);
+                languageDropdown.classList.add('hidden');
+                
+                // Update button text
+                const langText = link.querySelector('span').textContent;
+                const flag = link.querySelector('img').src;
+                languageButton.innerHTML = `<img src="${flag}" alt="${langText}" class="w-5 h-5"> <span>${langText}</span> <i class="fas fa-chevron-down text-xs"></i>`;
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                
+                answer.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+                
+                // Close other open FAQ items
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.nextElementSibling.classList.add('hidden');
+                        q.querySelector('i').classList.remove('rotate-180');
+                    }
+                });
+            });
+        });
+
+        // Menu Category Tabs
+        const menuCategories = document.querySelectorAll('.menu-category');
+        const menuContents = document.querySelectorAll('.menu-content');
+        
+        menuCategories.forEach(category => {
+            category.addEventListener('click', () => {
+                // Update active tab styling
+                menuCategories.forEach(c => c.classList.remove('bg-amber-600', 'text-white'));
+                menuCategories.forEach(c => c.classList.add('bg-amber-100', 'text-amber-800'));
+                category.classList.remove('bg-amber-100', 'text-amber-800');
+                category.classList.add('bg-amber-600', 'text-white');
+                
+                // Show selected content
+                const categoryName = category.getAttribute('data-category');
+                menuContents.forEach(content => {
+                    content.classList.add('hidden');
+                    if (content.id === `${categoryName}-menu`) {
+                        content.classList.remove('hidden');
+                    }
+                });
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Simple i18n implementation
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                
+                // This would normally fetch from translation files
+                // For demo, we'll just toggle between English and mock translations
+                if (lang === 'hi') {
+                    // Hindi translations
+                    if (key === 'hero.title') element.textContent = "परंपरा का स्वाद। क्षणों का जश्न।";
+                    else if (key === 'hero.subtitle') element.textContent = "1985 से प्यार और परंपरा के साथ परोसा जाने वाला प्रामाणिक ओडिया भोजन";
+                    // Add more Hindi translations as needed
+                } 
+                else if (lang === 'or') {
+                    // Odia translations
+                    if (key === 'hero.title') element.textContent = "ପରମ୍ପରା ର ସ୍ୱାଦ ଲିଅନ୍ତୁ। ସ୍ମରଣୀୟ ମୁହୂର୍ତ୍ତ ପାଳନ କରିବା।";
+                    else if (key === 'hero.subtitle') element.textContent = "1985 ରୁ ପ୍ରେମ ଏବଂ ପରମ୍ପରା ସହିତ ପରିବେଷିତ ପ୍ରାମାଣିକ ଓଡିଆ ଖାଦ୍ୟ";
+                    // Add more Odia translations as needed
+                }
+                else {
+                    // Default to English
+                    if (key === 'hero.title') element.textContent = "Savor Tradition. Celebrate Moments.";
+                    else if (key === 'hero.subtitle') element.textContent = "Authentic Odia cuisine served with love and tradition since 1985";
+                    // Reset other elements as needed
+                }
+            });
+            
+            // Font family changes for different languages
+            document.body.classList.remove('hindi-font', 'odia-font');
+            if (lang === 'hi') {
+                document.body.classList.add('hindi-font');
+            } else if (lang === 'or') {
+                document.body.classList.add('odia-font');
+            }
+        }
+    </script>
+</body>
+</html>
